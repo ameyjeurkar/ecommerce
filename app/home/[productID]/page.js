@@ -21,6 +21,7 @@ const ProductDetail = async ({ params }) => {
     const { productID } = await params;
     const response = await fetch(`https://dummyjson.com/products/${productID}`)
     const productDetails = await response.json();
+    console.log("HEHEH",productDetails)
 
     return (
         <div className="max-w-7xl mx-auto p-6">
@@ -83,7 +84,7 @@ const ProductDetail = async ({ params }) => {
                 
                 <div className="flex items-center gap-3">
                     <span className="text-2xl font-bold text-yellow-400">${productDetails?.price}</span>
-                    <span className="text-gray-400 line-through">$768.90</span>
+                    <span className="text-gray-400 line-through">- ${}</span>
                 </div>
 
                 {/* AVAILABILITY COMPONENT */}
