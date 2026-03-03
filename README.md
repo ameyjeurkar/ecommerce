@@ -154,6 +154,12 @@ https://one-stop-solution-ecommerce.netlify.app/home
 
 ---
 
+# Performance Metrics (using Lighthouse)
+
+<img width="1280" height="718" alt="image" src="https://github.com/user-attachments/assets/8488048c-e65d-41b5-a293-1142226f685f" />
+
+---
+
 # 👨‍💻 Author
 
 **Amey Jeurkar**
