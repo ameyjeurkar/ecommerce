@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 ShopCart – Modern E-Commerce Store
 
-## Getting Started
+A modern e-commerce web application built with **Next.js**, **React**, and **Tailwind CSS**.
+The application displays products, product details, and shopping functionality using a fast and scalable frontend architecture.
 
-First, run the development server:
+🔗 **Live Application:**
+https://one-stop-solution-ecommerce.netlify.app/home
+
+---
+
+# 🚀 Features
+
+* 🛍️ Browse product catalog
+* 🔎 View detailed product information
+* ⭐ Product ratings and reviews
+* 🛒 Add products to cart
+* 💳 Checkout page
+* 📱 Responsive UI
+* ⚡ Fast loading with server rendering
+
+---
+
+# 🖥️ Application Screens
+
+## Product Listing
+
+Displays all products in a responsive grid layout.
+
+## Product Details
+
+Shows product information including:
+
+* Product image
+* Description
+* Price
+* Rating
+* Buy / Add to Cart functionality
+
+---
+
+# 🧰 Technologies Used
+
+| Technology        | Purpose                             |
+| ----------------- | ----------------------------------- |
+| **JavaScript**    | Core programming language           |
+| **TypeScript**    | Static typing and safer code        |
+| **Next.js**       | React framework for SSR and routing |
+| **React.js**      | UI component library                |
+| **Tailwind CSS**  | Utility-first CSS styling           |
+| **DummyJSON API** | Mock product data API               |
+| **Netlify**       | Deployment and hosting              |
+
+---
+
+# 📦 API Used
+
+Product data is fetched from:
+
+https://dummyjson.com/products
+
+This API provides:
+
+* Product catalog
+* Product details
+* Ratings
+* Images
+* Pricing
+
+---
+
+# ⚙️ Installation & Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+Navigate into the project
+
+```bash
+cd your-repo-name
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application runs on:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app
+ ├ components
+ │   ├ Navbar.jsx
+ │   ├ Footer.jsx
+ │   └ ProductCard.jsx
+ │
+ ├ home
+ │   └ page.jsx
+ │
+ ├ api
+ │   └ products
+ │        └ route.js
+ │
+ └ layout.jsx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🧠 Key Concepts Implemented
 
-## Deploy on Vercel
+* Next.js **Server Components**
+* API routes using **Next.js App Router**
+* **Dynamic routing** for product pages
+* **Reusable UI components**
+* **Responsive design with Tailwind CSS**
+* **Server-side data fetching**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 🌐 Deployment
+
+The application is deployed using **Netlify**.
+
+Live URL:
+
+https://one-stop-solution-ecommerce.netlify.app/home
+
+---
+
+# 📌 Future Improvements
+
+* Authentication system
+* Persistent cart
+* Payment gateway integration
+* Product search and filtering
+* Order history
+
+---
+
+# 👨‍💻 Author
+
+**Amey Jeurkar**
+
+Frontend Engineer focused on building scalable web applications using modern JavaScript frameworks.
+
+---
+
+⭐ If you found this project helpful, consider giving it a star!
