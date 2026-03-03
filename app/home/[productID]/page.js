@@ -1,24 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const getProductDetails = async (productID) => {
-    const response = await fetch(`${process.env.NEXT_API_URL}/api/products`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            productID: productID
-        })
-    })
-    const data = await response.json();
+// SERVER NEXT API ROUTE
+// const getProductDetails = async (productID) => {
+//     const response = await fetch(`${process.env.NEXT_API_URL}/api/products`, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//             productID: productID
+//         })
+//     })
+//     const data = await response.json();
 
-    return data;
-}
+//     return data;
+// }
 
 const ProductDetail = async ({ params }) => {
     const { productID } = await params;
-    const productDetails = await getProductDetails(productID);
+    const response = await fetch(`https://dummyjson.com/products/${productID}`)
+    const productDetails = await response.json();
 
     return (
         <div className="max-w-7xl mx-auto p-6">

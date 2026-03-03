@@ -1,7 +1,8 @@
 import ProductCard from "../../components/ProductCard";
 
 const Home = async () => {
-    const products = await getProducts();
+    const response = await fetch("https://dummyjson.com/products");
+    const products = await response.json();
 
     return (
         <div className="products-wrapper">
