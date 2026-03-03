@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 
 const getProducts = async () => {
-  const response = await fetch(`${process.env.NEXT_API_URL}/products`); // server component needs process.env.NEXT_API_URL to fetch data from the API route we created in app/api/products/route.js
+  const response = await fetch(`${process.env.NEXT_API_URL}/api/products`); // server component needs process.env.NEXT_API_URL to fetch data from the API route we created in app/api/products/route.js
   const data = await response.json();
 
   return data;

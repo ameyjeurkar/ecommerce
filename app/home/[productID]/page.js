@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const getProductDetails = async (productID) => {
-    const response = await fetch(`${process.env.NEXT_API_URL}/products`, {
+    const response = await fetch(`${process.env.NEXT_API_URL}/api/products`, {
         method: "POST",
         body: JSON.stringify({
             productID: productID
