@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BuyNowButton from "../../../components/BuyNowButton";
 
 // SERVER NEXT API ROUTE
 // const getProductDetails = async (productID) => {
@@ -16,6 +17,8 @@ import Link from "next/link";
 
 //     return data;
 // }
+
+export const revalidate = 1;
 
 const ProductDetail = async ({ params }) => {
     const { productID } = await params;
@@ -36,7 +39,7 @@ const ProductDetail = async ({ params }) => {
                         {
                             productDetails?.images?.map(imageURL => {
                                 return (
-                                    <Image width={60} height={60} alt="thumbnail image" key={imageURL} className="w-20 h-20 border rounded-lg p-2 cursor-pointer" src={imageURL} />
+                                    <Image key={imageURL} width={60} height={60} alt="thumbnail image" className="w-20 h-20 border rounded-lg p-2 cursor-pointer" src={imageURL} />
                                 )
                             })
                         }
@@ -70,7 +73,7 @@ const ProductDetail = async ({ params }) => {
                 {
                     productDetails?.tags.map(tag => {
                         return (
-                            <span className="inline-flex items-center text-xs font-medium bg-blue-100 text-blue-800 px-3 py-1 rounded-full mt-2 mr-2">
+                            <span key={tag} className="inline-flex items-center text-xs font-medium bg-blue-100 text-blue-800 px-3 py-1 rounded-full mt-2 mr-2">
                                 {tag}
                             </span>
                         )
@@ -103,9 +106,10 @@ const ProductDetail = async ({ params }) => {
                 
                 {/* BUY BUTTONS */}
                 <div className="flex items-center gap-3 mt-6">
-                    <button className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-black py-3 rounded-lg font-medium cursor-pointer">
+                    {/* <button className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-black py-3 rounded-lg font-medium cursor-pointer">
                         BUY NOW
-                    </button>
+                    </button> */}
+                    <BuyNowButton productID={productID} />
                     <button className="flex-1 bg-green-800 hover:bg-green-900 text-white py-3 rounded-lg font-medium cursor-pointer">
                         ADD TO CART
                     </button>
